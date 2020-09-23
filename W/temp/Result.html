@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel ="stylesheet"  href="/static/css/commons.css">
+    <script src="/static/js/custom.js"></script>
+</head>
+<body class = 'bp main'>
+    <div id = "container">
+        <div id = "Top">
+            <div id = "logo">
+                <a href="/Server/">
+                    <img src ='/static/EnAcp_logo.png'>
+                </a>
+            </div>
+            <div id ="menu">
+                <h4>
+                    <ul>
+                        <li> <a href="/Server/"> New Job </a> </li>
+                        <li> <a href="/Server/"> Docs </a> </li>
+                        <li> <a href="/Server/"> About</a> </li>
+                        <li> <a href="/classServer/"> Download </a> </li>
+                        <li> <a href="/Server/"> Job Status </a> </li>
+                        <li id = 'last'> <a href="/Server/"> Group </a> </li>
+                    </ul>
+                </h4>
+            </div>
+        </div>
+<div id ="mainbody">
+
+                <style type="text/css">
+                    #myAutoComplete{
+                        width:50em;
+                        padding-bottom: 2em;
+                    }
+                    .yui-skin-sam .yui-ac-content{
+                        max-height:18em;
+                        overflow:auto;
+                        overflow-x:hidden; /* set scrolling */
+                         _height:18em;
+                    }
+                </style>
+                    <h2>
+
+                </h2>
+                <script type="text/javascript" src="/static/js/jquery-1.4.2.min.js"></script>
+                <table border="1" style=" margin: 0 auto;font-size:120% ">
+                    <caption><h2>Output</h2></caption>
+                    {% for line in test_data %}
+                    <tr>
+                        {% for i in line %}
+                        <td align="center" style="width:143px">{{ i }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+
+       </div>
+    </div>
+</body>
+</html>
